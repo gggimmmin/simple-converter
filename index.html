@@ -42,7 +42,7 @@
           <div>
             <label htmlFor="hours">Hours</label>
             <input
-              value={inverted ? amount : Math.round(amount / 60)}
+              value={inverted ? amount : (amount / 60).toFixed(1)}
               id="hours"
               placeholder="Hours"
               type="number"
