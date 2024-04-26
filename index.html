@@ -110,14 +110,38 @@
       return (
         <div>
           <h1>Simple Converter</h1>
-          <select value={index} onChange={onSelect}>
-            <option value="/">Select your units</option>
-            <option value="0">Minutes & Hours</option>
-            <option value="1">KM & Miles</option>
-          </select>
-          {index === "/" ? "Please select your units!" : null}
-          {index === "0" ? <MinutesToHours /> : null}
-          {index === "1" ? <KmToMiles /> : null}
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: "center",
+              alignItems: "center",
+              marginTop: "50px",
+            }}
+          >
+            <select
+              value={index}
+              onChange={onSelect}
+              style={{
+                appearance: "none",
+                border: "none",
+                width: "400px",
+                height: "50px",
+                textAlign: "center",
+                color: "white",
+                backgroundColor: "#4a7cdf",
+                fontSize: "20px",
+                borderRadius: "10px",
+              }}
+            >
+              <option value="/">Select your units</option>
+              <option value="0">Minutes & Hours</option>
+              <option value="1">KM & Miles</option>
+            </select>
+            {index === "/" ? "Please select your units!" : null}
+            {index === "0" ? <MinutesToHours /> : null}
+            {index === "1" ? <KmToMiles /> : null}
+          </div>
         </div>
       );
     }
