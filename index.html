@@ -16,6 +16,15 @@
   <script type="text/babel">
     const root = document.getElementById("root");
 
+    function MainPage() {
+      return (
+        <div style={{ marginTop: "50px" }}>
+          <h2 style={{ fontSize: "30px", fontWeight: "bold" }}>
+            Simple Converter 를 통해 간단한 단위 변환을 쉽게 해보세요!
+          </h2>
+        </div>
+      );
+    }
     // Minutes To Hours
     function MinutesToHours() {
       const [amount, setAmount] = React.useState(0);
@@ -138,7 +147,7 @@
               <option value="0">Minutes & Hours</option>
               <option value="1">KM & Miles</option>
             </select>
-            {index === "/" ? "Please select your units!" : null}
+            {index === "/" ? <MainPage /> : null}
             {index === "0" ? <MinutesToHours /> : null}
             {index === "1" ? <KmToMiles /> : null}
           </div>
