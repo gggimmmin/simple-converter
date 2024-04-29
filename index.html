@@ -16,6 +16,7 @@
   <script type="text/babel">
     const root = document.getElementById("root");
 
+    // Main Page
     function MainPage() {
       return (
         <div style={{ marginTop: "50px" }}>
@@ -151,6 +152,21 @@
             {index === "0" ? <MinutesToHours /> : null}
             {index === "1" ? <KmToMiles /> : null}
           </div>
+          <footer
+            style={{
+              position: "fixed",
+              bottom: 0,
+              left: 0,
+              width: "100%",
+              height: "30px",
+              textAlign: "center",
+              backgroundColor: "white",
+              color: "gray",
+              padding: "5px",
+            }}
+          >
+            Made by gggimmmin
+          </footer>
         </div>
       );
     }
