@@ -134,9 +134,19 @@
         setInverted((current) => !current);
       };
       return (
-        <div>
-          <div>
-            <label htmlFor="km">Kilometer</label>
+        <div
+          style={{
+            marginTop: "30px",
+            display: "flex",
+            flexDirection: "column",
+            width: "400px",
+            gap: "10px",
+          }}
+        >
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <label htmlFor="km" style={{ fontSize: "25px" }}>
+              Kilometer
+            </label>
             <input
               value={inverted ? num * 1.609344 : num}
               id="km"
@@ -144,10 +154,20 @@
               type="number"
               onChange={onChange}
               disabled={inverted}
+              style={{
+                appearance: "none",
+                border: "none",
+                width: "200px",
+                height: "30px",
+                fontSize: "20px",
+                borderRadius: "10px",
+              }}
             />
           </div>
-          <div>
-            <label htmlFor="miles">Miles</label>
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <label htmlFor="miles" style={{ fontSize: "25px" }}>
+              Miles
+            </label>
             <input
               value={inverted ? num : num * 0.621371}
               id="miles"
@@ -155,10 +175,42 @@
               type="number"
               onChange={onChange}
               disabled={!inverted}
+              style={{
+                appearance: "none",
+                border: "none",
+                width: "200px",
+                height: "30px",
+                fontSize: "20px",
+                borderRadius: "10px",
+              }}
             />
           </div>
-          <button onClick={reset}>Reset</button>
-          <button onClick={onInvert}>
+          <button
+            onClick={reset}
+            style={{
+              appearance: "none",
+              border: "none",
+              height: "30px",
+              borderRadius: "10px",
+              backgroundColor: "#df333a",
+              color: "white",
+              fontSize: "15px",
+            }}
+          >
+            Reset
+          </button>
+          <button
+            onClick={onInvert}
+            style={{
+              appearance: "none",
+              border: "none",
+              height: "30px",
+              borderRadius: "10px",
+              backgroundColor: "#1FC980",
+              color: "white",
+              fontSize: "15px",
+            }}
+          >
             {inverted ? "Turn back" : "Invert"}
           </button>
         </div>
